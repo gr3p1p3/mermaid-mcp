@@ -17,7 +17,7 @@ Unlike standard renderers, this server features a **Dual-Transport Engine**, all
 * **🌐 Universal Transport Architecture**: Native support for `stdio` (local desktop clients like Claude), `SSE` (Server-Sent Events) for persistent web connections, and **Stateless HTTP** (`/mcp`) for serverless/cloud-native deployments.
 * **🎨 Corporate Branding Engine**: Go beyond default themes. Inject **Custom CSS**, corporate color palettes, and brand-compliant typography directly into the rendering pipeline.
 * **🐳 Infrastructure-Agnostic**: A fully containerized Chromium-based rendering engine (via Puppeteer). No local `mermaid-cli` or Node.js dependencies required on the host machine.
-* **🛠 Production Ready**: Built-in support for watermarking, custom logos, and dynamic resolution scaling for high-fidelity exports (PNG, SVG, PDF).
+* **🛠 Production Ready**: Built-in support for watermarking, custom logos, and dynamic resolution scaling for high-fidelity exports (PNG, JPEG, SVG).
 
 ---
 
@@ -43,8 +43,6 @@ This diagram was generated in real-time by the **Mermaid MCP Pro Server**. It sh
 <p align="center">
   <img src="./images/flow.png" alt="Mermaid MCP Flow" width="80%">
 </p>
-
-* The example above uses the **'base'** theme with custom corporate color variables injected during the render pipeline.
 
 ---
 
