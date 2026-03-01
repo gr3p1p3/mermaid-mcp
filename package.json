@@ -1,0 +1,26 @@
+{
+  "name": "mermaid-mcp",
+  "type": "module",
+  "version": "1.0.0",
+  "author": "Edoardo Deiana, GR3P",
+  "license": "Apache 2.0",
+  "scripts": {
+    "start": "npm run build && MCP_TRANSPORT=sse node dist/index.js",
+    "build": "npx tsc",
+    "test:stdio": "node test/test.stdio.js",
+    "test:http": "bash test/test.sh",
+    "test": "npm run test:stdio && npm run test:http"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "express": "^5.2.1",
+    "mermaid": "^11.12.3",
+    "puppeteer": "^24.37.5",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
