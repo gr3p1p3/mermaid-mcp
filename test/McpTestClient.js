@@ -33,9 +33,8 @@ export class MCPTestClient {
     }
 
     async connectWithSSE(serverUrl) {
-        // Alcune versioni accettano un secondo parametro per il POST endpoint
         this.transport = new SSEClientTransport(
-            new URL(serverUrl),                                          // GET /sse
+            new URL(serverUrl),
             {requestInit: {headers: {Accept: 'text/event-stream'}}}
         );
         await this.client.connect(this.transport);
@@ -47,10 +46,6 @@ export class MCPTestClient {
         await this.client.connect(this.transport);
         console.log('✅ Connected via Streamable HTTP');
     }
-
-    /* ===================== UNIFIED API ===================== */
-
-    // Ora è tutto unificato, non serve più distinguere HTTP da STDIO/SSE
 
     async listTools() {
         return await this.client.listTools();
