@@ -14,7 +14,8 @@ export async function renderMermaid(
 ): Promise<{ data: string; mimeType: string }> {
     const browser = await puppeteer.launch({
         headless: true,
-        args: ['--no-sandbox']
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     try {
