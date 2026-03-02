@@ -21,6 +21,38 @@ Unlike standard renderers, this server features a **Dual-Transport Engine**, all
 
 ---
 
+## 🐳 Quick Start with Docker
+
+### 1. Clone & Build
+
+```bash
+git clone https://github.com/gr3p1p3/mermaid-mcp.git
+cd mermaid-mcp
+docker build -t mermaid-mcp .
+```
+
+### 2. Run
+
+```bash
+docker run -d \
+  -p 3000:3000 \
+  -e PORT=3000 \
+  -e MCP_TRANSPORT=sse \
+  --name mermaid-server \
+  mermaid-mcp
+```
+
+### 3. Verify it's running
+
+```bash
+curl http://localhost:3000/health
+```
+
+✅ Returns `200 OK` when the rendering engine is ready.
+
+---
+
+
 ## 🚀 Architectural Overview
 
 The server operates as a sophisticated bridge between the LLM's text output and a headless rendering context:
