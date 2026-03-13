@@ -7,7 +7,9 @@ COPY . .
 RUN npx tsc
 
 # Stage 2: Runtime
-FROM --platform=linux/arm64 node:20-slim
+FROM node:20-slim
+#FROM --platform=linux/arm64 node:20-slim  FOR MAC
+
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
